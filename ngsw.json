@@ -1,0 +1,127 @@
+{
+  "configVersion": 1,
+  "timestamp": 1686300435007,
+  "index": "https://LuisAlvizo.github.io/ProyectoFinal_Webs/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/favicon.ico",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/index.html",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/main.bcbd2006b1a3e632.js",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/manifest.webmanifest",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/polyfills.8098c9581ff03c0b.js",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/runtime.6bb677ffad319c4f.js",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/scripts.4d73e38f32c1f393.js",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/styles.ee4238724be98e1e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-128x128.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-144x144.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-152x152.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-192x192.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-384x384.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-512x512.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-72x72.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-96x96.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-home/imagen1.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-pantallaProgramadores/508970-removebg-preview.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-pantallaProgramadores/personas-removebg-preview.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/Fondo.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/StayMate.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/StayMateEslogan.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/depa.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/imagen.png",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/plantilla.webp",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/plantilla2.webp",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento1.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento10.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento11.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento12.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento2.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento3.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento4.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento5.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento6.jpeg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento7.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento8.jpg",
+        "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento9.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-home/imagen1.jpg": "49df04e016316214e3f1f364dbd034be23f4255a",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-pantallaProgramadores/508970-removebg-preview.png": "d63a1fb3afe99ceb3339beaa0f5eb252bdddd3a2",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes-pantallaProgramadores/personas-removebg-preview.png": "099d0746e173b11265f6b6de6621737ee752052c",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/Fondo.jpg": "33ee64fc6e370bcbcd2943e1522e56ab589da0eb",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/StayMate.png": "0d92d088832ea00145e48a92d5b1e12077458544",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/StayMateEslogan.png": "4cbe7b200a0ad30f8d61083e52229955b4802f13",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/depa.jpg": "ab34df5d374698fc882807e574b4d47710314e4e",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/imagen.png": "a15050ffe8c711bd89bac957e11d3a51b4d303a4",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/plantilla.webp": "0cbfd0a635fd5131042afbc53af5bbede5ea8467",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenes/plantilla2.webp": "33d4ba91c73da877aacd8849c9c46ff6aba24073",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento1.jpg": "99681fdcfc129fddb9b1f3efd5694af701b7ea05",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento10.jpg": "2bd460ceb0f0eb368292aa109610f33232ebf013",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento11.jpg": "234cdb49f43ec2fb90f93e52175fd22401a861f0",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento12.jpg": "981929ae2e392e8468aaf17e722b3b863c26a24a",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento2.jpg": "208926294c2ae80a053d37cbe9c0f81625ab58e8",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento3.jpg": "f30af8b74981a724be98dfc463b8909114ea4176",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento4.jpg": "d49ad998cab5fb3e344f21a9a874206095eba1b1",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento5.jpg": "1d60d972729257df8d456f865e56e6afcf8f2c18",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento6.jpeg": "7baeb473d5ed4ec2bc2ef07d95b702b7f2f1c814",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento7.jpg": "31c005ff388d9b26db64b77e28533e5fcbf646f3",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento8.jpg": "60c6ca08bca10509dfa511015fe59ae5ebad31d0",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/assets/imagenesAlojamientos/alojamiento9.jpg": "e9e23d84a087cf9b905f0c4c699e3bafe846963f",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/favicon.ico": "1d7c7476382b44f836267068cf5e09f977d64f9f",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/index.html": "da6073a7b58d0d421715aaf1f32aa2e605d2a3cd",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/main.bcbd2006b1a3e632.js": "97785be83d6729b1c1fa6e321182d706e43101fc",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/manifest.webmanifest": "e96ec8261630c7b147635f5dc0ab36a866456bf9",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/polyfills.8098c9581ff03c0b.js": "4acdd9056a8c8e0b4c4a525c090fc867126d802e",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/runtime.6bb677ffad319c4f.js": "6ba1b6f650a8795bef2f55703de2eac0da274969",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/scripts.4d73e38f32c1f393.js": "3e8364a7b004cb6b85b359d9409dbf9b8c10aaf4",
+    "https://LuisAlvizo.github.io/ProyectoFinal_Webs/styles.ee4238724be98e1e.css": "4a0556492287936e6e51a7deb6d97a6a7cc62263"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
