@@ -1,0 +1,25 @@
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+
+<div class="container" >
+    <div class="listings">
+        <div class="listing">
+            <ng-container *ngIf="index !== -1 else noexiste">
+                <img [src]="datos.imageUrl" alt="Listing Image">
+                <h2>{{datos.title}}</h2>
+                <p>{{datos.description}}</p>
+                <div class="price">${{datos.price}} .00 por noche</div>
+                <br>
+                <button (click)="reservar(datos!)">Reservar</button>
+            </ng-container>
+
+            <ng-template #noexiste>
+                <h1>{{mensaje}}</h1>
+            </ng-template>
+        </div>
+    </div>
+</div >
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

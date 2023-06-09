@@ -1,0 +1,46 @@
+th{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Chewy', cursive;
+    color: #6d9b23;
+    text-align: center;
+    background-color: #dae4ca;
+}
+
+td{
+    font-family: 'Handlee', cursive;
+    font-size: 20px;
+    background-color: #f2f3ef;
+    text-align: center;
+}
+
+table, th, td, tr{
+    border: #a5be7d;
+    border-style: solid double;
+}
+
+.tablaa{
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h5{
+    font-family: 'Chewy', cursive; 
+    font-size: 20px;
+}
+
+p{
+    font-family: 'Handlee', cursive;
+    font-size: 18px;
+    text-align: justify;
+}
+
+a{
+    font-family: 'Chewy', cursive;
+    font-size: 20px;
+    background-color: #6d9b23;
+    border-color: #6d9b23;
+}
+
+

@@ -1,0 +1,39 @@
+             <!-- LINKS GOOGLE FONTS -->
+             <link
+             href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+             rel="stylesheet">
+         <link
+             href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+             rel="stylesheet">
+         <link
+             href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+             rel="stylesheet">
+             <div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+      <h3 class="text-center mb-4"> </h3>
+      <h1>Condiciones Atmosfericas Estados/Municipios de la Republica</h1>
+      <hr>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col"> Municipio </th>
+            <th scope="col"> Estado </th>
+            <th scope="col"> Posible Clima </th>
+          </tr>
+        </thead>
+
+        <!-- *ngFor 
+        aqui se utilizo ngfor para ir recorriendo la lista de los distintos datos que obtenemos del
+      consumo de la api -->
+        <tbody *ngFor="let i of data">
+          <tr class="table-light">
+            <td> {{i.name}} </td>
+            <td> {{i.state}} </td>
+            <td> {{i.skydescriptionlong}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

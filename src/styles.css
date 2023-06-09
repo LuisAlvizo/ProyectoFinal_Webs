@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/*Escala Grises*/
+body {
+    transition: filter 0.5s ease;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/*Tamaño cursor*/
+body.small-cursor {
+    cursor: small;
+}
+
+body.large-cursor {
+    cursor: large;
+}
+
+
+/*Contraste*/
+body.high-contrast {
+    filter: invert(100%);
+}
+
+/*Resaltar enlaces*/
+body.highlight-links a {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}

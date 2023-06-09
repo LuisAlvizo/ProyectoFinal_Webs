@@ -1,0 +1,46 @@
+<!-- LINKS GOOGLE FONTS -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+    rel="stylesheet">
+
+
+<div class="tablaa">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha de llegada</th>
+                <th scope="col">Fecha de salida</th>
+                <th scope="col">Hora de llegada</th>
+                <th scope="col">Alojamiento reservado</th>
+            </tr>
+        </thead>
+        <tbody>
+
+             <!-- *ngFor 
+        aqui se utilizo ngfor para ir recorriendo la lista de las citas  -->
+            <tr *ngFor="let reservacion of mostrarCitas">
+                <td scope="row">{{reservacion.fullName}}</td>
+                <td>{{reservacion.arriveDate}}</td>
+                <td>{{reservacion.lastDate}}</td>
+                <td>{{reservacion.hora}}</td>
+                <td> <div class="card" style="width: 18rem;">
+                        <img [src]="reservacion.casaReservada.imageUrl"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{reservacion.casaReservada.title}}</h5>
+                            <!-- <p class="card-text">{{reservacion.casaReservada.description}}</p>
+                            <a href="#" class="btn btn-primary">${{reservacion.casaReservada.price}}.00
+                                por noche</a> -->
+                        </div>
+                    </div></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,32 @@
+.<!-- GOOGLE FONTS  -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+
+<div class="container" >
+    <div class="listings">
+
+        <!-- *ngFor 
+        aqui se utilizo ngfor para ir recorriendo la lista de los alojamientos que se crearon
+        en el array dentro del componente de ts -->
+        <div class="listing" *ngFor="let listing of listings">
+            <img [src]="listing.imageUrl" alt="Listing Image">
+            <!-- BINDING DEL MODELO A LA VISTA 
+            Aqui tenemos una variable llamada listing de tipo array en donde se tiene la informacion de cada 
+            una de las opciones de alojamientos, entonces mandamos llamar al dato que se quiera mostrar -->
+            <h2>{{listing.title}}</h2>
+            <p>{{listing.description}}</p>
+            <div class="price">${{listing.price}} .00 por noche</div>
+
+            <!-- BINDING DE LA VISTA AL MODELO 
+            Aqui se esta mandando llamar a una funcion con el click que se realizo previamnete en el ts del componente
+            y de esta manera podemos controlar la accion de reserva de cada uno de los items  -->
+            <button (click)="reservar(listing!)">Reservar</button>
+        </div>
+    </div>
+</div >
+
+<!-- hola -->
+

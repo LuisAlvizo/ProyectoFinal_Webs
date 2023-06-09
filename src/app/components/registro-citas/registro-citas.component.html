@@ -1,0 +1,101 @@
+<!-- LINKS GOOGLE FONTS -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+    rel="stylesheet">
+
+<div class="container">
+    <h1>Reserva ahora mismo.</h1>
+    <div style="display: flex; ">
+        <div>
+            <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
+                <input type="text" formControlName="fullName"
+                    placeholder="Nombre
+                    Completo">
+                <input type="text" formControlName="direccion"
+                    placeholder="Direccion">
+                <br>
+                <label for="hora">Fecha de llegada:</label>
+                <!-- Aqui se maneja el uso del calendario
+                {{today | date:'yyyy-MM-dd'}} se utiliza para manejar que no se puedan 
+                seleccionar fechas de dias que ya pasaron  -->
+                <input type="date" formControlName="arriveDate"
+                    placeholder="Fecha
+                    de
+                    llegada" min="{{today | date:'yyyy-MM-dd'}}">
+
+                <!-- *ngIf
+                    Si es que el valor de fecha de llegada es valido se habilita el campo de fecha de 
+                    salida para asi asegurar que el usuario llene esos valores necesarios, si no llenas tu valor
+                de llegada, no puedes llenar el valor de salida, mientras no tenga el valor arrivedate no va a mostrar
+                la fecha de salida-->
+                <div *ngIf="registerForm.value.arriveDate != ''">
+                    <label for="hora">Fecha de salida:</label>
+                    <input type="date" formControlName="lastDate"
+                        placeholder="Fecha
+                        de
+                        salida" min="{{registerForm.value.arriveDate |
+                        date:'yyyy-MM-dd'}}">
+                </div>
+
+                <label for="hora">Hora de llegada al establecimiento:</label>
+                <input type="time" id="hora" name="hora" formControlName="hora">
+                <input type="number" formControlName="huespedes"
+                    placeholder="Huéspedes">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                <label>
+                                    Nombre en la tarjeta:
+                                    <input type="text"
+                                        formControlName="cardName"
+                                        placeholder="Juan Perez">
+                                </label>
+                                <label>
+                                    Número de tarjeta:
+                                    <input type="text"
+                                        formControlName="cardNumber"
+                                        placeholder="1234567898765432">
+                                </label>
+                                <label>
+                                    Fecha de vencimiento:
+                                    <input type="text"
+                                        formControlName="expirationDate"
+                                        placeholder="06/25">
+                                </label>
+                                <label>
+                                    Código de seguridad:
+                                    <input type="text"
+                                        formControlName="securityCode"
+                                        placeholder="cvv">
+                                </label>
+                                <button type="submit"
+                                    [disabled]="registerForm.invalid">Pagar</button>
+                            </th>
+                            <th>
+                            </th>
+                        </tr>
+
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div>
+            <div class="card" style="width: 18rem;" class="fondoCasa">
+                <img [src]="alojamientoObject.imageUrl"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{alojamientoObject.title}}</h5>
+                    <p class="card-text">{{alojamientoObject.description}}</p>
+                    <a href="#" class="btn btn-primary">${{alojamientoObject.price}}.00
+                        por noche</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

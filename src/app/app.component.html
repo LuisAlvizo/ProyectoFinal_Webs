@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="respmenu">
+  <input type="checkbox">
+  <i class="fas fa-bars"></i>
+  <i class="fas fa-times"></i>
+  <nav>
+    <ul>
+      <li><a><button id="btnEscuchar">Lector de Pantalla</button></a></li>
+      <li><a><button id="pausar">pausar</button><button id="reanudar">reanudar</button></a></li>
+      <li><a><button id="terminar">terminar</button></a></li>
+      <li><a><button id="grayscale-toggle">Escala Grises</button></a></li>
+      <li><a><button id="contrast-toggle">Cambiar contraste de color</button></a></li>
+      <li><a><button id="highlight-links-toggle">Resaltar enlaces</button></a></li>
+    </ul>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<label for="voces">Selecciona la voz:</label>
+<br>
+<select id="voces">
+</select>
+<br><br>
+<app-footer></app-footer>

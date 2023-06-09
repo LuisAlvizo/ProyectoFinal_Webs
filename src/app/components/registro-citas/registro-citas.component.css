@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: 'Chewy', cursive;
+    color: #6d9b23;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    font-family: 'Handlee', cursive;
+    font-size: 23px;
+
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    background-color: #6d9b23;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listing {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    max-width: 300px;
+}
+
+.listing img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.listing h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.listing p {
+    margin-bottom: 10px;
+}
+
+.listing .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff5a5f;
+    margin-top: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+
+
+h5{
+    font-family: 'Chewy', cursive; 
+    font-size: 27px;
+}
+
+p{
+    font-family: 'Handlee', cursive;
+    font-size: 25px;
+    text-align: justify;
+}
+
+a{
+    font-family: 'Chewy', cursive;
+    font-size: 23px;
+    background-color: #6d9b23;
+    border-color: #6d9b23;
+}
+
+.fondoCasa{
+    background-color: #d5f1ca;
+}
+
+/* @media screen and (max-width: 600px) {
+
+    .table,
+    tbody,
+    tr,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        text-indent: -50%;
+        border-bottom: 1px solid #eee;
+    }
+
+    td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+} */
+
+
+.rounded-lg {
+    border-radius: 1rem;
+  }
+  
+  .nav-pills .nav-link {
+    color: #555;
+  }
+  
+  .nav-pills .nav-link.active {
+    color: #fff;
+  }
+

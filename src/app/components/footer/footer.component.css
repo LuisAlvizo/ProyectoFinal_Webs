@@ -1,0 +1,15 @@
+.estiloss{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Chewy', cursive;
+    color: #f6f8f4 ;
+    background-color: rgb(56, 97, 73);
+}
+
+a{
+   color: rgb(238, 241, 240);
+}
+
+button{
+    color: rgb(238, 241, 240);
+}

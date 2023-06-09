@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+  
+  input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+
+
+  
+  button {
+    background-color: #6d9b23;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+
+  }
+  
+  .listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .listing {
+    margin-bottom: 30px;
+    max-width: 310px;
+  }
+  
+  .listing img {
+    width: 330px;
+    height: 220px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .listing h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: bold;
+  }
+
+  h1{
+    
+    text-align: justify;
+  }
+  
+  .listing p {
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: 'Handlee', cursive;
+    font-size: 22px;
+  }
+  
+  .listing .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6d9b23;
+    margin-top: 10px;
+    font-family: 'Chewy', cursive;
+
+  }
+
+
+
+  /* font-family: 'Chewy', cursive;
+font-family: 'Londrina Solid', cursive;
+font-family: 'Loved by the King', cursive; */

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>StayMate</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<header>
+
+</header>
+
+<body class="mat-typography">
+  <app-root></app-root>
+  <script>
+    // Seleccionar estos idiomas por defecto, en caso de que existan
+    const IDIOMAS_PREFERIDOS = ["es-MX", "es-US", "es-ES", "es_US", "es_ES"];
+
+    // Esperar a que el que DOM cargue
+    document.addEventListener("DOMContentLoaded", () => {
+      //Resaltar enlace
+      document.getElementById("highlight-links-toggle").addEventListener("click", function () {
+        document.body.classList.toggle("highlight-links");
+      });
+
+
+      //Contraste
+      document.getElementById("contrast-toggle").addEventListener("click", function () {
+        document.body.classList.toggle("high-contrast");
+      });
+
+      //Modo Oscuro
+      document.getElementById("grayscale-toggle").addEventListener("click", function () {
+        document.body.classList.toggle("grayscale");
+      });
+
+      // Obtén una referencia al botón PARA PAUSAR EL SPEECHSYNTHESIS
+      var boton = document.getElementById("pausar");
+      // Agrega un evento de clic al botón
+      boton.addEventListener("click", function () {
+        speechSynthesis.pause();
+      });
+
+      // Obtén una referencia al botón PARA REANUDAR EL SPEECHSYNTHESIS
+      var boton = document.getElementById("reanudar");
+      // Agrega un evento de clic al botón
+      boton.addEventListener("click", function () {
+        speechSynthesis.resume();
+      });
+
+      // Obtén una referencia al botón PARA TERMINAR EL SPEECHSYNTHESIS
+      var boton = document.getElementById("terminar");
+      // Agrega un evento de clic al botón
+      boton.addEventListener("click", function () {
+        speechSynthesis.cancel();
+      });
+      //
+      const $voces = document.querySelector("#voces"),
+        $boton = document.querySelector("#btnEscuchar"),
+        $mensaje = document.querySelector("#mensaje");
+      let posibleIndice = 0,
+        vocesDisponibles = [];
+
+      // Función que pone las voces dentro del select
+      const cargarVoces = () => {
+        if (vocesDisponibles.length > 0) {
+          console.log(
+            "No se cargan las voces porque ya existen: ",
+            vocesDisponibles
+          );
+          return;
+        }
+        vocesDisponibles = speechSynthesis.getVoices();
+        console.log({ vocesDisponibles });
+        posibleIndice = vocesDisponibles.findIndex((voz) =>
+          IDIOMAS_PREFERIDOS.includes(voz.lang)
+        );
+        if (posibleIndice === -1) posibleIndice = 0;
+        vocesDisponibles.forEach((voz, indice) => {
+          const opcion = document.createElement("option");
+          opcion.value = indice;
+          opcion.innerHTML = voz.name;
+          opcion.selected = indice === posibleIndice;
+          $voces.appendChild(opcion);
+        });
+      };
+
+      // Si no existe la API, lo indicamos
+      if (!"speechSynthesis" in window)
+        return alert("Lo siento, tu navegador no soporta esta tecnología");
+
+      cargarVoces();
+      // Si hay evento, entonces lo esperamos
+      if ("onvoiceschanged" in speechSynthesis) {
+        speechSynthesis.onvoiceschanged = function () {
+          cargarVoces();
+        };
+      }
+      // El click del botón. Aquí sucede la magia
+      $boton.addEventListener("click", () => {
+        var elementos = document.querySelectorAll('app-navbar,p,h2,h3,b,th,th,caption');
+
+        // Iterar sobre los elementos y leer su contenido
+        var contenido = "";
+        let textoAEscuchar = "";
+        elementos.forEach(function (elemento) {
+          contenido = elemento.innerHTML;
+          textoAEscuchar = textoAEscuchar + contenido;
+          console.log(contenido);
+        });
+        //let textoAEscuchar = $mensaje.value;
+        /*
+        var elementos = document.querySelectorAll('h2');
+        var contenido = elementos[0].innerHTML;
+        */
+        //textoAEscuchar = contenido;
+        /*
+        let textoAEscuchar =
+          "Nosotros.........................." +
+          "Nuestras Marcas.........................." +
+          "Beneficios.........................." +
+          "Consejos.........................." +
+          "Noticias.........................." +
+          "Reclutamiento.........................." +
+          "Tienda";*/
+        //if (!textoAEscuchar) return alert("Escribe el texto");
+        let mensaje = new SpeechSynthesisUtterance();
+        mensaje.voice = vocesDisponibles[$voces.value];
+        mensaje.volume = 1;
+        mensaje.rate = 1;
+        mensaje.text = textoAEscuchar;
+        mensaje.pitch = 1;
+        // ¡Parla!
+        speechSynthesis.speak(mensaje);
+      });
+    });
+    /**/
+  </script>
+</body>
+
+</html>

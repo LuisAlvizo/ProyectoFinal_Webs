@@ -1,0 +1,51 @@
+<!-- LINKS GOOGLE FONTS -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+    rel="stylesheet">
+
+    <br>
+    <br>
+<div>
+<h2>Solo por hoy obten los mejores descuentos en cualquiera de nuestros alojamientos</h2>
+<div class="divv container" >
+    <form #myForm="ngForm" >
+        <br>
+        <div class="form-group">
+            <label for="firstName">Nombre:</label>
+
+            <!-- Se utilizo ngmodel para controlar desde el ts ls valores que se ingresan en los distintos inputs -->
+            <input type="text" class="form-control" id="firstName"
+                name="firstName"
+                [(ngModel)]="firstName" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Apellido:</label>
+            <input type="text" class="form-control" id="lastName"
+                name="lastName"
+                [(ngModel)]="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email"
+                [(ngModel)]="email" required email>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="enviarCupon()">Obtener
+            cupon</button>
+        <!-- hola -->
+        <br>
+        <br>
+        
+    </form>
+</div>
+<br>
+<br>
+ <h2>! Cupón valido para cualquier alojamiento !</h2>
+ <br>
+ <br>
+</div>
