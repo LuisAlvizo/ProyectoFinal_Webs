@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 // modulos que se usan para la creacion de formularios y validacion de nuestros campos de input 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServicioCitasService } from 'src/app/services/citas/servicio-citas.service';
 import Swal from 'sweetalert2';
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
   templateUrl: './registro-citas.component.html',
   styleUrls: ['./registro-citas.component.css'],
 })
-export class RegistroCitasComponent {
+export class RegistroCitasComponent implements OnInit{
   today: Date = new Date();
   selectedDate: Date | undefined;
 
@@ -21,15 +22,17 @@ export class RegistroCitasComponent {
 
   alojamiento: string;
   alojamientoObject: any;
+  
 
+  citas: any;
   constructor(
     private formBuilder: FormBuilder,
     private servicioCitas: ServicioCitasService,
-    private router: Router
+    private router: Router,
+    private userService: UserServiceService
   ) {
     this.alojamiento = localStorage.getItem('informacionCasaElegida')!;
     this.alojamientoObject = JSON.parse(this.alojamiento);
-
 
     // en esta parte se utilizan los modulos importados para la creacion de formularios
     //  reactivos y la validacion de este mismo 
@@ -58,8 +61,26 @@ export class RegistroCitasComponent {
     });
   }
 
+  
+
+  ngOnInit(): void {
+    this.getCitas();
+  }
+
+  async getCitas() {
+    this.citas = await this.userService.getCita();
+  }
+
+  async eliminarCita(nombreUsuario: any) {
+    await this.userService.eliminarCita(nombreUsuario);
+  }
+
   async submitForm() {
     let validarRegistro: any;
+
+    await this.userService.addCita(this.registerForm.value);
+    this.getCitas();
+
     // console.log(this.registerForm);
 
     // Aqui se utiliza el servicio para guardar nuestra cita generada y despues porderla consultar
