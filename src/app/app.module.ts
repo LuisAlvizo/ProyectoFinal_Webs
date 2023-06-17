@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroCitasComponent } from './components/registro-citas/registro-citas.component';
 import { AlojamientosComponent } from './components/alojamientos/alojamientos.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 //se estan utilizando los modulos de formsModule y reactiveFormsModule
 // se importo tambien el uso de FormsModule para el uso correcto del doble binding
 // (ngModel)
@@ -32,6 +32,7 @@ import { LugaresService } from './shared/lugares.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
+
 @NgModule({
   declarations: [
 
@@ -49,6 +50,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     DatosComponent,
     MostrarComponent,
     FooterComponent,
+    PreguntasFComponent,
   ],
   imports: [
     BrowserModule,

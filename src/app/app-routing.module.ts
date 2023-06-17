@@ -9,11 +9,12 @@ import { PantallaProgramadoresComponent } from './components/pantalla-programado
 import { FormCuponComponent } from './form-cupon/form-cupon.component';
 import { DatosComponent } from './components/datos/datos.component';
 import { MostrarComponent } from './components/mostrar/mostrar.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
   { path: 'cupon', component: FormCuponComponent },
+  { path: 'Ayuda', component: PreguntasFComponent},
   //Ruta con paso de parametro
   { path: 'registro/:id', component: RegistroCitasComponent },
   { path: 'alojamientos', component: AlojamientosComponent },
