@@ -1,0 +1,23 @@
+body{
+    font-family: 'Chewy', cursive;
+    font-size: 29px;
+    color: #283b08 ;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #6d9b23;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+  }
+
+  h2{
+    font-family: 'Chewy', cursive;
+    font-size: 29px;
+    color: #283b08 ;
+    text-align: center;
+}
