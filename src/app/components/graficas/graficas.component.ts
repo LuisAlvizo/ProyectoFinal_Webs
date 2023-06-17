@@ -32,4 +32,10 @@ export class GraficasComponent implements OnInit{
         }
       });
     }
+
+    Texto= "Gráfica de Barras";
+    //Texto: segundo = "Hospedajes más reservados";
+
+    Fecha: Date = new Date();
+
     }

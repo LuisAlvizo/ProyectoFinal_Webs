@@ -8,15 +8,23 @@
              href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
              rel="stylesheet">
 <body>
-    <h1>Gráfica de Barras</h1>
+    <h1>{{Texto}}</h1>
   <h2>Hospedajes mas reservados en StayMate</h2>
   <div class="row">
       <div class="col">
-          <div style="display: block">
+          <div class="hola">
             <div class="container">
                 <canvas id="barChart"></canvas>
             </div>
+            <div>
+                <p>{{Fecha}}</p>
+                <p>{{Fecha|date}}</p>
+                <p>{{Fecha|date:'dd/mm/yy'}}</p> 
+              </div>
             </div>
+            
       </div>
+      
   </div>
+  
   </body>
