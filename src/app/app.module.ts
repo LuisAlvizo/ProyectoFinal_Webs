@@ -31,6 +31,7 @@ import { MostrarComponent } from './components/mostrar/mostrar.component';
 import { LugaresService } from './shared/lugares.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     DatosComponent,
     MostrarComponent,
     FooterComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,

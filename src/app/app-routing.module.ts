@@ -9,7 +9,7 @@ import { PantallaProgramadoresComponent } from './components/pantalla-programado
 import { FormCuponComponent } from './form-cupon/form-cupon.component';
 import { DatosComponent } from './components/datos/datos.component';
 import { MostrarComponent } from './components/mostrar/mostrar.component';
-
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent  },
   { path: 'datos', component: DatosComponent  },
   { path: 'about', component: AboutComponent  },
+  { path: 'contacto', component: ContactoComponent  },
   { path: 'programadores', component: PantallaProgramadoresComponent  },
   { path: 'mostrar/:buscar', component: MostrarComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}

@@ -1,0 +1,74 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Rock+Salt"
+  rel="stylesheet"
+  type="text/css"
+/>
+<!-- LINKS GOOGLE FONTS -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<br />
+<h2
+  [ngStyle]="{
+    'font-size': '55px',
+    color: '#6d9b23',
+    'text-align': 'center',
+    'font-family': 'Chewy'
+  }"
+>
+<p>Te Contactaremos</p>
+<body>
+    <form [formGroup]="datos">
+        <div>
+          <div>
+            <h4></h4>
+            <br>
+            <input type="text" placeholder="nombre" formControlName="nombre">
+            <span *ngIf="this.datos.get('nombre')?.errors?.['required']">
+                (El nombre no puede quedar vacío)
+            </span>
+            <span *ngIf="this.datos.get('nombre')?.errors?.['minlength']">
+                (Debe tener como mínimo 10 caracteres)
+            </span>
+            <input type="email" placeholder="Correo Electronico" formControlName="correo">
+            <span *ngIf="this.datos.get('correo')?.errors?.['required']">
+                (El email no puede quedar vacío)
+            </span>
+            <span *ngIf="this.datos.get('correo')?.errors?.['email']">
+                (El email no es válido)
+            </span>
+            <input type="text" placeholder="numero" formControlName="numero">
+            <span *ngIf="this.datos.get('numero')?.errors?.['required']">
+                (El numero no puede quedar vacío)
+            </span>
+            <span *ngIf="this.datos.get('numero')?.errors?.['minlength']">
+                (Debe tener como mínimo 10 digitos)
+            </span>
+            <input type="text" placeholder="Asunto" formControlName="asunto">
+            <div *ngIf="this.datos.get('asunto')?.errors?.['required']">
+                (El asunto no puede quedar vacío)
+            </div>
+            <textarea placeholder="Mensaje" cols="40" rows="4" formControlName="mensaje"></textarea>
+            <div *ngIf="this.datos.get('mensaje')?.errors?.['required']">
+                (El mensaje no puede quedar vacío)
+            </div>
+            <div *ngIf="this.datos.get('mensaje')?.errors?.['maxlength']">
+                (Debe tener como máximo 500 caracteres)
+            </div>
+            <div>
+            <button (click)="envioCorreo()">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div>{{resultado}}</div>
+</body>
