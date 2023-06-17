@@ -24,17 +24,17 @@ export class ContactoComponent {
   envioCorreo(){
     if(this.datos.valid){
       this.resultado = "Todos los datos son válidos";
+      let params = {
+        email:this.datos.value.correo,
+        asunto:this.datos.value.asunto,
+        mensaje:this.datos.value.mensaje
+      }
+      console.log(params)
+      this.httpclient.post('http://localhost:3000/envio',params).subscribe(resp=>{
+        console.log(resp);
+      });
     }else{
       this.resultado = "Hay datos inválidos en el formulario";
     }
-    let params = {
-      email:this.datos.value.correo,
-      asunto:this.datos.value.asunto,
-      mensaje:this.datos.value.mensaje
-    }
-    console.log(params)
-    this.httpclient.post('http://localhost:3000/envio',params).subscribe(resp=>{
-      console.log(resp);
-    });
   }
 }
