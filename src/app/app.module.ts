@@ -1,4 +1,4 @@
-import { NgModule, isDevMode } from '@angular/core';
+import { NgModule, isDevMode,CUSTOM_ELEMENTS_SCHEMA   } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +31,27 @@ import { MostrarComponent } from './components/mostrar/mostrar.component';
 import { LugaresService } from './shared/lugares.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { VerificacionComponent } from './components/verificacion/verificacion.component';
+import { RecuperarContraComponent } from './components/recuperar-contra/recuperar-contra.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { OpLoginComponent } from './components/op-login/op-login.component';
+import { LoginTelComponent } from './components/login-tel/login-tel.component';
+import { OpRegistroComponent } from './components/op-registro/op-registro.component';
+import { RegistroTelComponent } from './components/registro-tel/registro-tel.component';
+import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
+import { RegUsuariosComponent } from './components/reg-citas/reg-citas.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from './environments/environment.prod';
+import { ToastrModule } from 'ngx-toastr';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+import { NgOtpInputModule } from 'ng-otp-input';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 
 @NgModule({
   declarations: [
@@ -49,19 +70,40 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     DatosComponent,
     MostrarComponent,
     FooterComponent,
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    RegistroComponent,
+    VerificacionComponent,
+    RecuperarContraComponent,
+    SpinnerComponent,
+    OpLoginComponent,
+    LoginTelComponent,
+    OpRegistroComponent,
+    RegistroTelComponent,
+    VerificacionTelComponent,
+    RegUsuariosComponent,
+    UsuariosComponent,
+    GenerarQrComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxQRCodeModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
     MatGridListModule,
     MatSnackBarModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
+    NgOtpInputModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -70,6 +112,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     })
   ],
   providers: [LugaresService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

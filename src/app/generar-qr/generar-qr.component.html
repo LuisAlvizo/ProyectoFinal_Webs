@@ -1,0 +1,28 @@
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+    rel="stylesheet">
+
+<div style="display: flex; margin: 15%; ">
+    <div class="container containerr" >
+        <div class="card cardd" >
+            <h3>Aqui tienes la informacion de tu alojamiento reservado</h3>
+            <!-- div que nos ayuda a mostrar el qr generado 
+            si no hay valor en la variable se muestra -->
+            <div>
+
+                <!-- se añade el componente ngx-qrcode y se asignan los valores generados desde la logica 
+                del componente para que el qr se genere de manera correcta -->
+                <ngx-qrcode
+                    [value]="value"
+                    cssClass="aclass"
+                    [errorCorrectionLevel]="errorCorrectionLevel">
+                </ngx-qrcode>
+            </div>
+        </div>
+    </div>
+</div>

@@ -60,4 +60,8 @@ export class ServicioCitasService {
   alta(url: string, body: any) {
     return this.httpClient.post(url, body).toPromise();
   }
+
+  obtenerQr(url: string, body?: any) {
+    return this.httpClient.post(url, body).toPromise();
+  }
 }
