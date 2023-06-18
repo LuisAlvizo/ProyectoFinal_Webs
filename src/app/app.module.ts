@@ -52,6 +52,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
+import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { GenerarQrComponent } from './generar-qr/generar-qr.component';
     VerificacionTelComponent,
     RegUsuariosComponent,
     UsuariosComponent,
-    GenerarQrComponent
+    GenerarQrComponent,
+    VerReservacionesComponent
   ],
   imports: [
     BrowserModule,
