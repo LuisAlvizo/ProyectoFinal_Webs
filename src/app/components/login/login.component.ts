@@ -28,6 +28,7 @@ export class LoginComponent {
       this.toastr.success('Login exitoso','Mensaje');
       this.router.navigate(['/dashboard']);
       this.cargando = false;
+      localStorage.setItem("user","");
     }).catch((error) => {
       this.toastr.error('Login falló','Mensaje');
       console.log(error);

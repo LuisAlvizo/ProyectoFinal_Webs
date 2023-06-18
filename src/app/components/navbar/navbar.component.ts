@@ -8,35 +8,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  lugares:Lugar[] ;
-  index:number=-1;
+  lugares: Lugar[];
+  index: number = -1;
   datos!: Lugar;
   mensaje!: string;
+  loginUsuario: boolean = false;
+  loginADMIN: boolean = false;
 
-  constructor(public servicio: LugaresService, private router: Router){
-    this.lugares=this.servicio.getLugar();
+  constructor(public servicio: LugaresService, private router: Router) {
+    this.lugares = this.servicio.getLugar();
   }
 
- /* ver(aux:string){
-    console.log("Estoy en el metodo ver"+aux);
-    this.index = this.lugares.findIndex(p => p.title === aux);
-    console.log(this.index);
-    if(this.index !== -1){
-      this.datos = this.lugares[this.index];
-      console.log(this.datos);
-    }else{
-      this.mensaje="El lugar no exite!";
-      //console.log(this.mensaje);
-      setTimeout(() => {
-        this.mensaje="";
-      }, 2000);
-    }
-  }*/
- dirigirBusqueda(buscar: string) {
-    if (buscar !=''){
+  /* ver(aux:string){
+     console.log("Estoy en el metodo ver"+aux);
+     this.index = this.lugares.findIndex(p => p.title === aux);
+     console.log(this.index);
+     if(this.index !== -1){
+       this.datos = this.lugares[this.index];
+       console.log(this.datos);
+     }else{
+       this.mensaje="El lugar no exite!";
+       //console.log(this.mensaje);
+       setTimeout(() => {
+         this.mensaje="";
+       }, 2000);
+     }
+   }*/
+  dirigirBusqueda(buscar: string) {
+    if (buscar != '') {
       this.router.navigate(['mostrar/' + buscar])
-    }else{
+    } else {
       this.router.navigate(['']);
     }
- }
-  } 
+  }
+} 
