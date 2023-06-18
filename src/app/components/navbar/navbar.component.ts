@@ -14,9 +14,13 @@ export class NavbarComponent {
   mensaje!: string;
   loginUsuario: boolean = false;
   loginADMIN: boolean = false;
+  correo: string = "";
+
 
   constructor(public servicio: LugaresService, private router: Router) {
     this.lugares = this.servicio.getLugar();
+    this.correo = localStorage.getItem("correo") || "";
+
   }
 
   /* ver(aux:string){

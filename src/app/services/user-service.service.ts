@@ -27,6 +27,10 @@ export class UserServiceService {
     return this.items$;
   }
 
+  getUsuario() {
+    return this.users$;
+  }
+
   eliminarCita(nombreUsuario: any): void {
     this.firestore.doc('citas/' + nombreUsuario).delete()
       .then(() => {

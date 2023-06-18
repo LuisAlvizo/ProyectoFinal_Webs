@@ -56,7 +56,6 @@ import { GraficasComponent } from './components/graficas/graficas.component';
 
 @NgModule({
   declarations: [
-
     //Aqui estan todos los componentes
     AppComponent,
     AlojamientosComponent,
@@ -71,7 +70,6 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     DatosComponent,
     MostrarComponent,
     FooterComponent,
-
     AppComponent,
     LoginComponent,
     DashboardComponent,
@@ -86,9 +84,7 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     VerificacionTelComponent,
     RegUsuariosComponent,
     UsuariosComponent,
-
     GraficasComponent,
-
   ],
   imports: [
     BrowserModule,
