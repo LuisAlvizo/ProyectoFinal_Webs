@@ -1,0 +1,82 @@
+.tit1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.text{ 
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: 'Handlee', cursive;
+    font-size: 22px;
+    padding: 5px;
+    width: 90%;
+}
+
+.tit2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.accordion{
+    width: 80%;
+    text-align: justify;
+    font-family: 'Handlee', cursive;
+    font-size: 22px;
+    
+}
+
+.accordion-header{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+img{
+    width: 100%;
+}
+
+.card-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.card-text{
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: 'Handlee', cursive;
+    font-size: 22px;
+    padding: 5px;
+}
+
+.tit5{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Chewy', cursive;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+.text2{ 
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    font-size: 22px;
+    padding: 5px;
+}

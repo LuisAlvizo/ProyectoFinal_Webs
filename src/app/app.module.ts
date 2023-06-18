@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroCitasComponent } from './components/registro-citas/registro-citas.component';
 import { AlojamientosComponent } from './components/alojamientos/alojamientos.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 //se estan utilizando los modulos de formsModule y reactiveFormsModule
 // se importo tambien el uso de FormsModule para el uso correcto del doble binding
 // (ngModel)
@@ -52,6 +52,7 @@ import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
+
 
 @NgModule({
   declarations: [

@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'regUser', component: RegUsuariosComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'cupon', component: FormCuponComponent },
+  // { path: 'Ayuda', component: PreguntasFComponent},
   //Ruta con paso de parametro
   { path: 'registro/:id', component: RegistroCitasComponent },
   { path: 'alojamientos', component: AlojamientosComponent },
