@@ -9,17 +9,6 @@ import { PantallaProgramadoresComponent } from './components/pantalla-programado
 import { FormCuponComponent } from './form-cupon/form-cupon.component';
 import { DatosComponent } from './components/datos/datos.component';
 import { MostrarComponent } from './components/mostrar/mostrar.component';
-import { OpLoginComponent } from './components/op-login/op-login.component';
-import { OpRegistroComponent } from './components/op-registro/op-registro.component';
-import { LoginComponent } from './components/login/login.component';
-import { LoginTelComponent } from './components/login-tel/login-tel.component';
-import { RegUsuariosComponent } from './components/reg-citas/reg-citas.component';
-import { RecuperarContraComponent } from './components/recuperar-contra/recuperar-contra.component';
-import { RegistroComponent } from './components/registro/registro.component';
-import { RegistroTelComponent } from './components/registro-tel/registro-tel.component';
-import { VerificacionComponent } from './components/verificacion/verificacion.component';
-import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
-import { UsuariosComponent } from './components/usuarios/usuarios.component';
 
 
 // Aqui estan las rutas que utilizamos
@@ -38,6 +27,7 @@ const routes: Routes = [
   { path: 'regUser', component: RegUsuariosComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'cupon', component: FormCuponComponent },
+  { path: 'Ayuda', component: PreguntasFComponent},
   //Ruta con paso de parametro
   { path: 'registro/:id', component: RegistroCitasComponent },
   { path: 'alojamientos', component: AlojamientosComponent },

@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroCitasComponent } from './components/registro-citas/registro-citas.component';
 import { AlojamientosComponent } from './components/alojamientos/alojamientos.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 //se estan utilizando los modulos de formsModule y reactiveFormsModule
 // se importo tambien el uso de FormsModule para el uso correcto del doble binding
 // (ngModel)
@@ -51,6 +51,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 
+
 @NgModule({
   declarations: [
 
@@ -68,20 +69,6 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
     DatosComponent,
     MostrarComponent,
     FooterComponent,
-    AppComponent,
-    LoginComponent,
-    DashboardComponent,
-    RegistroComponent,
-    VerificacionComponent,
-    RecuperarContraComponent,
-    SpinnerComponent,
-    OpLoginComponent,
-    LoginTelComponent,
-    OpRegistroComponent,
-    RegistroTelComponent,
-    VerificacionTelComponent,
-    RegUsuariosComponent,
-    UsuariosComponent
   ],
   imports: [
     BrowserModule,
