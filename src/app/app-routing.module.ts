@@ -20,6 +20,7 @@ import { RegistroTelComponent } from './components/registro-tel/registro-tel.com
 import { VerificacionComponent } from './components/verificacion/verificacion.component';
 import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { GraficasComponent } from './components/graficas/graficas.component';
 
 
 // Aqui estan las rutas que utilizamos
@@ -50,6 +51,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent  },
   { path: 'programadores', component: PantallaProgramadoresComponent  },
   { path: 'mostrar/:buscar', component: MostrarComponent},
+  { path: 'graficas', component: GraficasComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

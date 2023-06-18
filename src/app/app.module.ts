@@ -51,6 +51,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
 
+import { GraficasComponent } from './components/graficas/graficas.component';
+
+
 @NgModule({
   declarations: [
 
@@ -68,6 +71,7 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
     DatosComponent,
     MostrarComponent,
     FooterComponent,
+
     AppComponent,
     LoginComponent,
     DashboardComponent,
@@ -82,6 +86,9 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
     VerificacionTelComponent,
     RegUsuariosComponent,
     UsuariosComponent
+
+    GraficasComponent,
+
   ],
   imports: [
     BrowserModule,
