@@ -21,7 +21,7 @@ import { VerificacionComponent } from './components/verificacion/verificacion.co
 import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'regUser', component: RegUsuariosComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'cupon', component: FormCuponComponent },
+  { path: 'ayuda', component: PreguntasFComponent },
   // { path: 'Ayuda', component: PreguntasFComponent},
   //Ruta con paso de parametro
   { path: 'registro/:id', component: RegistroCitasComponent },
