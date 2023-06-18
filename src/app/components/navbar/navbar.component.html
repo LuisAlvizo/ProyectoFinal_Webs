@@ -16,7 +16,7 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['alojamientos']">Alojamientos</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item" routerLinkActive="active" *ngIf="loginUsuario">
           <a class="nav-link" [routerLink]="['verCitas/:null']">Mis Reservaciones</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
@@ -25,14 +25,14 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['programadores']">Nosotros</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item" routerLinkActive="active" *ngIf="loginUsuario">
           <a class="nav-link" [routerLink]="['cupon']">¡Consigue un cupon!</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['datos']">Datos Atmosfericos</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['graficas']">graficas</a>
+        <li class="nav-item" routerLinkActive="active" *ngIf="loginADMIN">
+          <a class="nav-link" [routerLink]="['graficas']">Gráficas</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

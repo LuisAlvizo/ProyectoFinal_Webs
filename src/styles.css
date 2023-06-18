@@ -1,11 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
-
+@import 'ngx-toastr/toastr';
 html,
 body {
     height: 100%;
 }
+.contenedor {
+    background-color: #242424;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    color: #fff;
+}
+.loginImg {
+    height: 130px;
+    max-width: 350px;
+}
+.contenido {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+.contenido2 {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+input {
+    color: #000;
+}
+
 
 body {
     margin: 0;
