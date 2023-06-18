@@ -13,10 +13,10 @@
     <div style="display: flex; ">
         <div>
             <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
-                <input type="text" formControlName="fullName"
+                <input type="text" formControlName="fullName" 
                     placeholder="Nombre
                     Completo">
-                <input type="text" formControlName="direccion"
+                <input type="text" formControlName="direccion" 
                     placeholder="Direccion">
                 <br>
                 <label for="hora">Fecha de llegada:</label>
@@ -73,6 +73,12 @@
                                     <input type="text"
                                         formControlName="securityCode"
                                         placeholder="cvv">
+                                </label>
+                                <label>
+                                   Ingresa tu email al que le llegaran los datos de tu reservacion:
+                                    <input type="text"
+                                        formControlName="email"
+                                        placeholder="Email">
                                 </label>
                                 <button type="submit"
                                     [disabled]="registerForm.invalid">Pagar</button>

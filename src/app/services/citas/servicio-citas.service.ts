@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServicioCitasService {
+
+  constructor(private httpClient: HttpClient) { }
+
   private citas: any = [];
 
   // esta funcion nos ayuda a validar y guardar citas que no esten previamente ya registradas para que de esta manera
@@ -51,5 +55,13 @@ export class ServicioCitasService {
 
   obtenerCitas() {
     return this.citas;
+  }
+
+  alta(url: string, body: any) {
+    return this.httpClient.post(url, body).toPromise();
+  }
+
+  obtenerQr(url: string, body?: any) {
+    return this.httpClient.post(url, body).toPromise();
   }
 }
