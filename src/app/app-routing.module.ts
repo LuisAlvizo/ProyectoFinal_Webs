@@ -23,6 +23,8 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
+
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
@@ -47,8 +49,8 @@ const routes: Routes = [
   { path: 'registro/:id', component: RegistroCitasComponent },
   { path: 'alojamientos', component: AlojamientosComponent },
   //Ruta con paso de parametro  nombreReservaStorage
-  // este parametro nos ayuda a obtener el nombre con el que se ha guardado nuestro objeto de la reservacion en 
-  // el localStorage 
+  // este parametro nos ayuda a obtener el nombre con el que se ha guardado nuestro objeto de la reservacion en el localStorage 
+  { path: 'verReserva', component: VerReservacionesComponent  },
   { path: 'verCitas/:nombreReservaStorage', component: VerCitasComponent },
   { path: 'home', component: HomeComponent  },
   { path: 'datos', component: DatosComponent  },
