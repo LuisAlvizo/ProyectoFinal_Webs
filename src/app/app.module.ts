@@ -85,7 +85,7 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     RegistroTelComponent,
     VerificacionTelComponent,
     RegUsuariosComponent,
-    UsuariosComponent
+    UsuariosComponent,
 
     GraficasComponent,
 
