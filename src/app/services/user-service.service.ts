@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, QuerySnapshot } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 
@@ -29,6 +29,12 @@ export class UserServiceService {
 
   getUsuario() {
     return this.users$;
+  }
+
+  getConsulta(nombre: string): Observable<any> {
+    return this.firestore
+      .collection<any>('citas', (ref) => ref.where('data.casaReservada.title', '==', nombre))
+      .valueChanges();
   }
 
   eliminarCita(nombreUsuario: any): void {

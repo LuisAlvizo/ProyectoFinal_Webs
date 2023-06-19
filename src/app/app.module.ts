@@ -56,6 +56,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 
 import { GraficasComponent } from './components/graficas/graficas.component';
+import { ConsultasComponent } from './components/consultas/consultas.component';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     RegUsuariosComponent,
     UsuariosComponent,
     GraficasComponent,
-    GenerarQrComponent
+    GenerarQrComponent,
+    ConsultasComponent
   ],
   imports: [
     BrowserModule,

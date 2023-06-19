@@ -25,6 +25,7 @@ import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
+import { ConsultasComponent } from './components/consultas/consultas.component';
 
 
 // Aqui estan las rutas que utilizamos
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'programadores', component: PantallaProgramadoresComponent  },
   { path: 'mostrar/:buscar', component: MostrarComponent},
   { path: 'graficas', component: GraficasComponent},
+  { path: 'consultas', component: ConsultasComponent},
   { path: 'generarQr/:id', component: GenerarQrComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
