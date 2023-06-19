@@ -57,10 +57,17 @@ export class ServicioCitasService {
     return this.citas;
   }
 
+
+  // correo electronico 
+  // Esta línea define la función "alta" con dos parámetros: "url" y "body". "url" es de tipo string y representa la URL a la que se realizará la solicitud POST
+  // Esta línea utiliza un objeto "httpClient" para realizar una solicitud HTTP POST a la URL especificada. 
+  // El método "post" envía una solicitud POST a la URL con los datos del cuerpo proporcionados.
   alta(url: string, body: any) {
     return this.httpClient.post(url, body).toPromise();
   }
 
+
+  //esta funcion nos ayuda tanto a obetener el qr como a eliminar las citas
   obtenerQr(url: string, body?: any) {
     return this.httpClient.post(url, body).toPromise();
   }
