@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistroCitasComponent } from './components/registro-citas/registro-citas.component';
 import { AlojamientosComponent } from './components/alojamientos/alojamientos.component';
-
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 //se estan utilizando los modulos de formsModule y reactiveFormsModule
 // se importo tambien el uso de FormsModule para el uso correcto del doble binding
 // (ngModel)
@@ -48,17 +48,22 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from './environments/environment.prod';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { NgOtpInputModule } from 'ng-otp-input';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { GenerarQrComponent } from './generar-qr/generar-qr.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 
 import { GraficasComponent } from './components/graficas/graficas.component';
 
 
 @NgModule({
   declarations: [
-
     //Aqui estan todos los componentes
     AppComponent,
+    ContactoComponent,
+    VerReservacionesComponent,
     AlojamientosComponent,
     RegistroCitasComponent,
     VerCitasComponent,
@@ -71,7 +76,6 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     DatosComponent,
     MostrarComponent,
     FooterComponent,
-
     AppComponent,
     LoginComponent,
     DashboardComponent,
@@ -86,15 +90,15 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     VerificacionTelComponent,
     RegUsuariosComponent,
     UsuariosComponent,
-
     GraficasComponent,
-
+    GenerarQrComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    NgxQRCodeModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,

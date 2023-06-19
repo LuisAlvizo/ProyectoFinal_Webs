@@ -15,7 +15,11 @@ export class UserServiceService {
     this.items$ = this.firestore.collection('citas').valueChanges();
   }
 
+
   addCita(user: any) {
+    // Se utiliza la api de firebase a traves de dos fucniones, una seria el idicar en que coleccion 
+    // quiero agregar el registro (collection) y la otra seria la funcion en la que le mando mi objeto y quiero 
+    // que se registre en la bd (add)
     this.firestore.collection('citas').add({ data: user });
   }
 
@@ -25,6 +29,10 @@ export class UserServiceService {
 
   getCita() {
     return this.items$;
+  }
+
+  getUsuario() {
+    return this.users$;
   }
 
   eliminarCita(nombreUsuario: any): void {
