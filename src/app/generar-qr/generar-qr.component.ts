@@ -35,7 +35,7 @@ export class GenerarQrComponent implements OnInit {
       fullName : fullName
     }
     this.servicioCitas
-      .obtenerQr('http://localhost:3000/userQr', body)
+      .obtenerQr('https://servernodejs.onrender.com/userQr', body)
       .then((result: any) => {
         this.generarQr(result.result);
         console.log(result);
