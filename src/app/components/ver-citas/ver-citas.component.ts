@@ -10,6 +10,7 @@ import { NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
   styleUrls: ['./ver-citas.component.css'],
 })
 export class VerCitasComponent implements OnInit {
+  correo: string = "";
   mostrarCitas: any;
   alojamiento: string;
   alojamientoObject: any;
@@ -30,6 +31,10 @@ export class VerCitasComponent implements OnInit {
 
   ngOnInit() {
     //------
+    this.correo = localStorage.getItem("correo") || "";
+    if (this.correo == "")
+      this.router.navigate(['/login']);
+
     this.route.paramMap.subscribe((params: Params) => {
       //aqui se obtiene el valor que se paso por parametro en la ruta
       const nombreReservaStorage = params['get']('nombreReservaStorage');
@@ -75,7 +80,7 @@ export class VerCitasComponent implements OnInit {
   // firebase y continuara con el flujo de cancelacion 
   eliminar(fullName: any) {
     let body = {
-      fullName : fullName
+      fullName: fullName
     }
     this.servicioCitas
       .obtenerQr('https://sernodejs.onrender.com/cancelar', body)
