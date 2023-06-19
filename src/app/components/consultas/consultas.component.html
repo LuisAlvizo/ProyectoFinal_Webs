@@ -1,12 +1,15 @@
-<h2>Consultas</h2>
+<br>
+<h2>Consultar datos de Alojamientos</h2>
+<br>
+<!-- Caja de texto para ingresar la consulta -->
+<input type="text" [(ngModel)]="consultaText" placeholder="Ingrese la consulta">
 
-<!-- Botones para realizar consultas -->
-<button (click)="consultar('Cabañas en Maldivas')">Consultar Cabañas en Maldivas</button>
-<button (click)="consultar('Casa frente al mar en Cancún')">Consultar Casa frente al mar en Cancún</button>
+<!-- Botón para realizar la consulta -->
+<button (click)="consultar()">Consultar</button>
 
 <!-- Mostrar las consultas -->
 <div *ngIf="citas$ | async as citas">
-  <h3>Consultas encontradas:</h3>
+  <h3>Datos del Alojamiento:</h3>
   <table class="table">
     <thead>
         <tr>
@@ -28,3 +31,26 @@
     </tbody>
 </table>
 </div>
+
+<button (click)="consultar2()">Consultar Usuarios Registrados</button>
+<div *ngIf="usuarios$ | async as usuarios">
+    <h3>Usuarios Encontrados:</h3>
+    <table class="table">
+      <thead>
+          <tr>
+              <th scope="col">Identificador</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Fecha de Acesso</th>
+              <th scope="col">Fecha deCreacion</th>           
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let usuario of usuarios$ | async">
+              <td scope="row">{{usuario.data.identificador}}</td>
+              <td>{{usuario.data.correo}}</td>
+              <td>{{usuario.data.fechaAcceso}}</td>
+              <td>{{usuario.data.fechaCreacion}}</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>

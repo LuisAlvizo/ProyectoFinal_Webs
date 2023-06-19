@@ -35,13 +35,16 @@
           <a class="nav-link" [routerLink]="['graficas']">Gráficas</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['ayuda']">ayuda</a>
+          <a class="nav-link" [routerLink]="['ayuda']">Ayuda</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" [routerLink]="['contacto']">De Contacto</a>
         </li>
         <li class="nav-item" routerLinkActive="active" *ngIf="loginADMIN">
           <a class="nav-link" [routerLink]="['verReserva']">ver Reservaciones</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" *ngIf="loginADMIN">
+          <a class="nav-link" [routerLink]="['consultas']">Consultas</a>
         </li>
         <li class="nav-item" routerLinkActive="active" *ngIf="!loginADMIN&&!loginUsuario">
           <a class="nav-link" [routerLink]="['oplogin']">Login</a>
@@ -51,10 +54,6 @@
         </li>
         <li class="nav-item" routerLinkActive="active" *ngIf="loginADMIN||loginUsuario">
           <a class="nav-link" [routerLink]="['login']" (click)="cerrarSesion()">CERRAR SESIÓN</a>
-        </li>
-
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" [routerLink]="['consultas']">Consultas</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

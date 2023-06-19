@@ -1,4 +1,4 @@
-body{
+.container{
     font-family: 'Chewy', cursive;
     font-size: 29px;
     color: #283b08 ;
@@ -22,7 +22,14 @@ h1{
     text-align: center;
 }
 
-.hola{
-    width: 1100px;
-    text-align: center;
+p{
+    font-size: 19px;
+}
+
+.pipe{
+    font-size: 12px;
+}
+
+.titulo{
+    color: #6d9b23;
 }
