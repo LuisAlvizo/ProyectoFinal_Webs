@@ -3,6 +3,7 @@ import { ServicioCitasService } from 'src/app/services/citas/servicio-citas.serv
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { NgxQrcodeErrorCorrectionLevels } from '@techiediaries/ngx-qrcode';
+import { UserServiceService } from 'src/app/services/user-service.service';
 
 @Component({
   selector: 'app-ver-citas',
@@ -22,13 +23,14 @@ export class VerCitasComponent implements OnInit {
   constructor(
     private servicioCitas: ServicioCitasService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private userService: UserServiceService
   ) {
     this.alojamiento = localStorage.getItem('informacionCasaElegida')!;
     this.alojamientoObject = JSON.parse(this.alojamiento);
   }
 
-  ngOnInit() {
+  ngOnInit() : void{
     //------
     this.route.paramMap.subscribe((params: Params) => {
       //aqui se obtiene el valor que se paso por parametro en la ruta
@@ -44,15 +46,23 @@ export class VerCitasComponent implements OnInit {
       }
     });
     //-----
-    this.arrayCitasObect = this.servicioCitas.obtenerCitas();
-    let arrayCitas = JSON.stringify(this.arrayCitasObect);
-    localStorage.setItem('arrayCitas', arrayCitas);
+    //this.arrayCitasObect = this.servicioCitas.obtenerCitas();
+    //let arrayCitas = JSON.stringify(this.arrayCitasObect);
+    //localStorage.setItem('arrayCitas', arrayCitas);
     //MOSTRAR INFORMACION DEL LOCAL STORAGE
     //Aqui se obtiene la informacion de nuestro array del LocalStorage para asi poder mostrarla
     // en la tabla de mis reservaciones
-    this.mostrarCitas = JSON.parse(localStorage.getItem('arrayReservaciones')!);
+    //this.mostrarCitas = JSON.parse(localStorage.getItem('arrayReservaciones')!);
+    this.consultar();
+
+      // Realiza cualquier otra lógica necesaria con las citas
+ 
   }
 
+  async consultar() {
+    this.mostrarCitas= await this.userService.getConsulta3();
+  }
+  
   showModal() {
     Swal.fire({
       icon: 'success',
