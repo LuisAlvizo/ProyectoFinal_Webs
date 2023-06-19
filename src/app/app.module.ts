@@ -55,9 +55,12 @@ import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 
+import { GraficasComponent } from './components/graficas/graficas.component';
+import { ConsultasComponent } from './components/consultas/consultas.component';
+
+
 @NgModule({
   declarations: [
-
     //Aqui estan todos los componentes
     AppComponent,
     ContactoComponent,
@@ -88,7 +91,9 @@ import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones
     VerificacionTelComponent,
     RegUsuariosComponent,
     UsuariosComponent,
-    GenerarQrComponent
+    GraficasComponent,
+    GenerarQrComponent,
+    ConsultasComponent
   ],
   imports: [
     BrowserModule,

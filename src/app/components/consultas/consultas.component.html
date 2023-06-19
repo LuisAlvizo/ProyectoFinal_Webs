@@ -1,0 +1,55 @@
+<h2>Consultar datos de Alojamientos</h2>
+
+<!-- Caja de texto para ingresar la consulta -->
+<input type="text" [(ngModel)]="consultaText" placeholder="Ingrese la consulta">
+
+<!-- Botón para realizar la consulta -->
+<button (click)="consultar()">Consultar</button>
+
+<!-- Mostrar las consultas -->
+<div *ngIf="citas$ | async as citas">
+  <h3>Datos del Alojamiento:</h3>
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de llegada</th>
+            <th scope="col">Fecha de salida</th>
+            <th scope="col">Hora de llegada</th>   
+            <th scope="col">Alojamiento reservado</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservacion of citas$ | async">
+            <td scope="row">{{reservacion.data.fullName}}</td>
+            <td>{{reservacion.data.arriveDate}}</td>
+            <td>{{reservacion.data.lastDate}}</td>
+            <td>{{reservacion.data.hora}}</td>
+            <td>{{reservacion.data.casaReservada.title}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<button (click)="consultar2()">Consultar Usuarios Registrados</button>
+<div *ngIf="usuarios$ | async as usuarios">
+    <h3>Usuarios Encontrados:</h3>
+    <table class="table">
+      <thead>
+          <tr>
+              <th scope="col">Identificador</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Fecha de Acesso</th>
+              <th scope="col">Fecha deCreacion</th>           
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let usuario of usuarios$ | async">
+              <td scope="row">{{usuario.data.identificador}}</td>
+              <td>{{usuario.data.correo}}</td>
+              <td>{{usuario.data.fechaAcceso}}</td>
+              <td>{{usuario.data.fechaCreacion}}</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>

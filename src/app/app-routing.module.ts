@@ -20,20 +20,22 @@ import { RegistroTelComponent } from './components/registro-tel/registro-tel.com
 import { VerificacionComponent } from './components/verificacion/verificacion.component';
 import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { GraficasComponent } from './components/graficas/graficas.component';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
+import { ConsultasComponent } from './components/consultas/consultas.component';
 
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
-  { path: '', redirectTo: 'oplogin', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'oplogin', component: OpLoginComponent },
   { path: 'opregistro', component: OpRegistroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logintel', component: LoginTelComponent },
-  { path: 'dashboard', component: RegUsuariosComponent },
+  { path: 'dashboard', component: HomeComponent },
   { path: 'recuperacion', component: RecuperarContraComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'registrotel', component: RegistroTelComponent },
@@ -57,6 +59,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent  },
   { path: 'programadores', component: PantallaProgramadoresComponent  },
   { path: 'mostrar/:buscar', component: MostrarComponent},
+  { path: 'graficas', component: GraficasComponent},
+  { path: 'consultas', component: ConsultasComponent},
   { path: 'generarQr/:id', component: GenerarQrComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];

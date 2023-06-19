@@ -24,12 +24,15 @@ export class LoginComponent {
     const contra = this.loginU.value.contra;
     this.cargando = true;
     this.afAuth.signInWithEmailAndPassword(email, contra).then((user) => {
-      console.log(user);
-      this.toastr.success('Login exitoso','Mensaje');
       this.router.navigate(['/dashboard']);
+      this.toastr.success('Login exitoso', 'Mensaje');
       this.cargando = false;
+      localStorage.setItem("correo", email);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     }).catch((error) => {
-      this.toastr.error('Login falló','Mensaje');
+      this.toastr.error('Login falló', 'Mensaje');
       console.log(error);
       this.cargando = false;
     })

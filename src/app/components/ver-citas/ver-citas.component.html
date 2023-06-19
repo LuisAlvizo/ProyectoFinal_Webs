@@ -23,30 +23,20 @@
             </tr>
         </thead>
         <tbody>
-
             <!-- *ngFor 
         aqui se utilizo ngfor para ir recorriendo la lista de las citas  -->
-            <tr *ngFor="let reservacion of mostrarCitas">
-                <td scope="row">{{reservacion.fullName}}</td>
-                <td>{{reservacion.arriveDate}}</td>
-                <td>{{reservacion.lastDate}}</td>
-                <td>{{reservacion.hora}}</td>
-                <td> <div class="card" style="width: 18rem;">
-                        <img [src]="reservacion.casaReservada.imageUrl"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{reservacion.casaReservada.title}}</h5>
-                            <!-- <p class="card-text">{{reservacion.casaReservada.description}}</p>
-                            <a href="#" class="btn btn-primary">${{reservacion.casaReservada.price}}.00
-                                por noche</a> -->
-                        </div>
-                    </div></td>
+            <tr *ngFor="let reservacion of mostrarCitas | async">
+                <td scope="row">{{reservacion.data.fullName}}</td>
+                <td>{{reservacion.data.arriveDate}}</td>
+                <td>{{reservacion.data.lastDate}}</td>
+                <td>{{reservacion.data.hora}}</td>
+                <td> </td>
                 <td>
+                    <!-- boton para generar qr, al dar click nos manda a la funcion de generar qr -->
                     <button class="btn btn-warning" (click)="generarQr(reservacion.fullName)">Generar</button></td>
                 <td>
                     <button class="btn btn-danger" (click)="eliminar(reservacion.fullName)">Cancelar reservacion</button></td>
             </tr>
         </tbody>
     </table>
-
 </div>
