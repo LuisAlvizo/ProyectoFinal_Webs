@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from 'src/app/services/user-service.service';
 
-// modulos que se usan para la creacion de formularios y validacion de nuestros campos de input 
-import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+// modulos que se usan para la creacion de formularios y validacion de nuestros campos de input
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { ServicioCitasService } from 'src/app/services/citas/servicio-citas.service';
 import Swal from 'sweetalert2';
@@ -12,7 +17,7 @@ import Swal from 'sweetalert2';
   templateUrl: './registro-citas.component.html',
   styleUrls: ['./registro-citas.component.css'],
 })
-export class RegistroCitasComponent implements OnInit{
+export class RegistroCitasComponent implements OnInit {
   today: Date = new Date();
   selectedDate: Date | undefined;
 
@@ -22,7 +27,6 @@ export class RegistroCitasComponent implements OnInit{
 
   alojamiento: string;
   alojamientoObject: any;
-  
 
   citas: any;
   constructor(
@@ -45,7 +49,7 @@ export class RegistroCitasComponent implements OnInit{
       huespedes: ['', Validators.required],
       hora: ['', Validators.required],
       cardName: ['', Validators.required],
-      email: ['',Validators.required],
+      email: ['', Validators.required],
       cardNumber: [
         '',
         [
@@ -62,8 +66,6 @@ export class RegistroCitasComponent implements OnInit{
     });
   }
 
-  
-
   ngOnInit(): void {
     this.getCitas();
   }
@@ -79,6 +81,7 @@ export class RegistroCitasComponent implements OnInit{
   async submitForm() {
     let validarRegistro: any;
 
+    //llamamos a nuestra funcion que registra las citas pasandole nuestro objeto con la info del registro
     await this.userService.addCita(this.registerForm.value);
     this.getCitas();
 
@@ -130,12 +133,16 @@ export class RegistroCitasComponent implements OnInit{
   insertar(reservacionObj: any): void {
     //Llamamos a alta y mandamos la url del API, al igual que mandamos
     // los datos del body
+
+    //correo electronico
+    // este objeto contienen los datos necesarios de la reservacion los cuales nosotros manejamos en la bd y utilizamos para mandar la 
+    // informacion necesaria por el correo que se les proporciona en este mismo Objecto
     this.servicioCitas
-      .alta('https://servernodejs.onrender.com/user', reservacionObj)
+      .alta('https://sernodejs.onrender.com/user', reservacionObj)
       .then((data) => {
         console.log(data);
       })
-      //aqui se maneja cualquier erro que ocurra durante la solicitud
+      //aqui se maneja cualquier error que ocurra durante la solicitud
       // a la api
       .catch((err) => {
         console.log(err);
