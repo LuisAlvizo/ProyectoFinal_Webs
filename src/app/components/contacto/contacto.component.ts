@@ -32,7 +32,7 @@ export class ContactoComponent {
         mensaje: "La persona con nombre: "+this.datos.value.nombre+" y correo: "+this.datos.value.correo+" a utilizado su formulario. \nPregunta: "+this.datos.value.mensaje
       }
       console.log(params)
-      this.httpclient.post('https://sernodejs.onrender.com/envio',params).subscribe(resp=>{
+      this.httpclient.post('https://apicorreo.onrender.com/envio',params).subscribe(resp=>{
         console.log(resp);
       });
       //var campo = document.getElementById('nombre') as HTMLInputElement;
