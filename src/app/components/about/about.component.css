@@ -1,7 +1,9 @@
+/* Estilos para pantallas grandes */
 .contenedor {
   display: flex;
   justify-content: center;
 }
+
 .cont {
   display: flex;
   justify-content: center;
@@ -9,15 +11,12 @@
   height: auto;
   width: 60%;
 }
+
 p {
   text-align: center;
   font-size: 250%;
   font-family: "Verdana";
 }
-/*
-.a { border-collapse: separate; }
-.b { border-collapse: collapse; } 
-tr, td, th{ border: 1px solid grey;}*/
 
 .flex-container {
   display: flex;
@@ -28,16 +27,17 @@ tr, td, th{ border: 1px solid grey;}*/
   margin-right: 10%;
   margin-left: 10%;
 }
+
 #table1 {
-  /*border: 1px solid black;*/
-  /*text-decoration-style: solid;*/
   margin-left: 40px;
   padding: 50px;
 }
+
 #td2 {
   text-align: center;
   font-size: 25px;
 }
+
 .btn {
   border-width: 2px;
   border-style: solid;
@@ -52,17 +52,18 @@ tr, td, th{ border: 1px solid grey;}*/
   background-color: transparent;
   margin: 20px;
 }
+
 .btn1:hover {
   background-color: #1eba90;
 }
+
 #t3 {
   font-size: 22px;
 }
+
 b {
   font-size: 20px;
 }
-
-/* spacing */
 
 table {
   table-layout: fixed;
@@ -91,7 +92,6 @@ th,
 td {
   padding: 20px;
 }
-/* typography */
 
 html {
   font-family: "helvetica neue", helvetica, arial, sans-serif;
@@ -117,9 +117,9 @@ tbody td {
 tfoot th {
   text-align: right;
 }
+
 thead,
 tfoot {
-  /*background: url(leopardskin.jpg);*/
   color: white;
   text-shadow: 1px 1px 1px black;
 }
@@ -130,35 +130,95 @@ tfoot td {
   background: linear-gradient(to bottom, #6d9b23, #6d9b23);
   border: 3px solid rgb(206, 206, 212);
 }
+
 mat-grid-tile {
   background: #90ce2c;
 }
+
 mat-grid-list {
   width: 100%;
 }
+
 #t5 {
   font-size: 18px;
   font-family: "Georgia";
   color: white;
 }
-h1{
+
+h1 {
   color: #ffffff;
   font-family: "Georgia";
-  
 }
-.ch1{
+
+.ch1 {
   display: flex;
   justify-content: center;
   background-color: #90b455;
 }
-.ch11{
+
+.ch11 {
   display: flex;
   justify-content: center;
   background-color: rgb(34, 50, 58);
   width: 500px;
 }
+
 .contenedor2 {
   display: flex;
   justify-content: center;
   background-color: #90b455;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .cont {
+    width: 90%;
+  }
+
+  p {
+    font-size: 200%;
+  }
+
+  #table1 {
+    margin-left: 20px;
+    padding: 30px;
+  }
+
+  #td2 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 18px;
+  }
+
+  #t3 {
+    font-size: 20px;
+  }
+
+  b {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .ch11 {
+    width: 100%;
+  }
+}
+
+.homer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homer mat-icon {
+  font-size: 24px; /* Tamaño deseado */
 }
