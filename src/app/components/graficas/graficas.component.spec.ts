@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GraficasComponent } from './graficas.component';
 
 describe('GraficasComponent', () => {

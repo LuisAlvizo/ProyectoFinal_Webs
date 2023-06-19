@@ -1,4 +1,4 @@
-import { NgModule, isDevMode,CUSTOM_ELEMENTS_SCHEMA   } from '@angular/core';
+import { NgModule, isDevMode,CUSTOM_ELEMENTS_SCHEMA, Pipe   } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +27,7 @@ import { DatosComponent } from './components/datos/datos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MostrarComponent } from './components/mostrar/mostrar.component';
 
+
 //servicio
 import { LugaresService } from './shared/lugares.service';
 import { FooterComponent } from './components/footer/footer.component';
@@ -54,9 +55,8 @@ import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/aut
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
-
 import { GraficasComponent } from './components/graficas/graficas.component';
-
+import { ReverseStr } from './components/pipes/reserved.pipe'
 
 @NgModule({
   declarations: [
@@ -91,7 +91,8 @@ import { GraficasComponent } from './components/graficas/graficas.component';
     RegUsuariosComponent,
     UsuariosComponent,
     GraficasComponent,
-    GenerarQrComponent
+    GenerarQrComponent,
+    ReverseStr
   ],
   imports: [
     BrowserModule,

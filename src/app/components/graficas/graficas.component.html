@@ -9,12 +9,14 @@
              rel="stylesheet">
 <div class="container">
     <h1>{{Texto}}</h1>
+    <h1 class="pipe">{{ Texto | reversed }}</h1>
   <h2>Reservaciones registradas en la base de datos de StayMate con el número de huéspedes</h2>
             <div class="container">
                 <canvas id="barChart"></canvas>
             </div>
             <br><br><br>
             <div>
+                <p class="titulo">Fecha y hora en la que estás viendo las gráficas:</p>
                 <p>{{Fecha}}</p>
                 <p>{{Fecha|date}}</p>
                 <p>{{Fecha|date:'dd/mm/yy'}}</p> 
