@@ -39,7 +39,7 @@ export class GenerarQrComponent implements OnInit {
       fullName: fullName,
     };
     this.servicioCitas
-      .obtenerQr('https://servernodejs.onrender.com/userQr', body)
+      .obtenerQr('https://sernodejs.onrender.com/userQr', body)
       .then((result: any) => {
         // Una vez que se obtuvo una respuesta positiva la informacion se manda a nuestra informacion de generar qr la cual nos yuda a continuar con nuestro flujo
         this.generarQr(result.result);

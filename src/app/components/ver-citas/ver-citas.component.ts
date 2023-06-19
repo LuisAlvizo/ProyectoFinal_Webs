@@ -78,7 +78,7 @@ export class VerCitasComponent implements OnInit {
       fullName : fullName
     }
     this.servicioCitas
-      .obtenerQr('https://servernodejs.onrender.com/cancelar', body)
+      .obtenerQr('https://sernodejs.onrender.com/cancelar', body)
       .then((result: any) => {
         console.log(result);
       })

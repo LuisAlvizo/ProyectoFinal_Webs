@@ -138,7 +138,7 @@ export class RegistroCitasComponent implements OnInit {
     // este objeto contienen los datos necesarios de la reservacion los cuales nosotros manejamos en la bd y utilizamos para mandar la 
     // informacion necesaria por el correo que se les proporciona en este mismo Objecto
     this.servicioCitas
-      .alta('https://servernodejs.onrender.com/user', reservacionObj)
+      .alta('https://sernodejs.onrender.com/user', reservacionObj)
       .then((data) => {
         console.log(data);
       })
