@@ -1,0 +1,32 @@
+<!-- LINKS GOOGLE FONTS -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Chewy&family=Delicious+Handrawn&family=Londrina+Solid:wght@300&family=Loved+by+the+King&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+    rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+    rel="stylesheet">
+
+<div class="tablaa">
+    <h1>TODAS LAS RESERVACIONES</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Fecha de llegada</th>
+                <th scope="col">Fecha de salida</th>
+                <th scope="col">Hora de llegada</th>             
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservacion of mostrarCitas | async">
+                <td scope="row">{{reservacion.data.fullName}}</td>
+                <td>{{reservacion.data.arriveDate}}</td>
+                <td>{{reservacion.data.lastDate}}</td>
+                <td>{{reservacion.data.hora}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

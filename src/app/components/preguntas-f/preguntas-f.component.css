@@ -1,82 +1,162 @@
-.tit1{
+body {
+    font-family: 'Delicious Handrawn', cursive;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-family: 'Chewy', cursive;
     font-size: 24px;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .tit1 {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
     margin-bottom: 10px;
-    font-family: 'Chewy', cursive;
-    font-size: 25px;
-    text-align: justify;
+  }
+
+  .tit2 {
+    font-family: 'Loved by the King', cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px;
-}
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-.text{ 
-    margin-bottom: 10px;
-    text-align: justify;
+  .accordion-button:hover {
+    background-color: #e9ecef;
+  }
+
+  .accordion-button.collapsed {
+    background-color: #f8f9fa;
+  }
+
+  .accordion-body {
+    background-color: #f8f9fa;
+    color: #333;
     font-family: 'Handlee', cursive;
-    font-size: 22px;
-    padding: 5px;
-    width: 90%;
-}
-
-.tit2{
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.accordion{
-    width: 80%;
-    text-align: justify;
-    font-family: 'Handlee', cursive;
-    font-size: 22px;
-    
-}
-
-.accordion-header{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Chewy', cursive;
-    font-size: 25px;
-    text-align: justify;
-    font-weight: bold;
-}
-
-img{
-    width: 100%;
-}
-
-.card-title{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Chewy', cursive;
-    font-size: 25px;
-    text-align: justify;
-    font-weight: bold;
-}
-
-.card-text{
-    margin-bottom: 10px;
-    text-align: justify;
-    font-family: 'Handlee', cursive;
-    font-size: 22px;
-    padding: 5px;
-}
-
-.tit5{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Chewy', cursive;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
+    font-size: 16px;
     padding: 10px;
-}
-.text2{ 
-    margin-bottom: 10px;
-    text-align: center;
+  }
+
+  .text {
     font-family: 'Handlee', cursive;
-    font-size: 22px;
-    padding: 5px;
-}
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-family: 'Londrina Solid', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-family: 'Handlee', cursive;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .tit5 {
+    font-family: 'Loved by the King', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .text2 {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .contact-item {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+
+  .contact-item-icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .contact-item-text {
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      flex-basis: 100%;
+    }
+  }

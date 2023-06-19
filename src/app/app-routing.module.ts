@@ -20,7 +20,11 @@ import { RegistroTelComponent } from './components/registro-tel/registro-tel.com
 import { VerificacionComponent } from './components/verificacion/verificacion.component';
 import { VerificacionTelComponent } from './components/verificacion-tel/verificacion-tel.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { GraficasComponent } from './components/graficas/graficas.component';
 import { GenerarQrComponent } from './generar-qr/generar-qr.component';
+import { PreguntasFComponent } from './components/preguntas-f/preguntas-f.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 
 
 // Aqui estan las rutas que utilizamos
@@ -35,23 +39,26 @@ const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'registrotel', component: RegistroTelComponent },
   { path: 'verificacion', component: VerificacionComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: 'verificaciontel', component: VerificacionTelComponent },
   { path: 'regUser', component: RegUsuariosComponent },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'cupon', component: FormCuponComponent },
+  { path: 'ayuda', component: PreguntasFComponent },
   // { path: 'Ayuda', component: PreguntasFComponent},
   //Ruta con paso de parametro
   { path: 'registro/:id', component: RegistroCitasComponent },
   { path: 'alojamientos', component: AlojamientosComponent },
   //Ruta con paso de parametro  nombreReservaStorage
-  // este parametro nos ayuda a obtener el nombre con el que se ha guardado nuestro objeto de la reservacion en 
-  // el localStorage 
+  // este parametro nos ayuda a obtener el nombre con el que se ha guardado nuestro objeto de la reservacion en el localStorage 
+  { path: 'verReserva', component: VerReservacionesComponent  },
   { path: 'verCitas/:nombreReservaStorage', component: VerCitasComponent },
   { path: 'home', component: HomeComponent  },
   { path: 'datos', component: DatosComponent  },
   { path: 'about', component: AboutComponent  },
   { path: 'programadores', component: PantallaProgramadoresComponent  },
   { path: 'mostrar/:buscar', component: MostrarComponent},
+  { path: 'graficas', component: GraficasComponent},
   { path: 'generarQr/:id', component: GenerarQrComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
