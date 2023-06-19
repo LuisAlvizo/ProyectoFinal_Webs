@@ -25,7 +25,6 @@ export class NavbarComponent implements OnInit {
     this.lugares = this.servicio.getLugar();
     this.correo = localStorage.getItem("correo") || "";
     this.getUser();
-    alert("constructor");
   }
   ngOnInit(): void {
     this.getUser();
@@ -77,6 +76,5 @@ export class NavbarComponent implements OnInit {
     this.loginUsuario = false;
     this.usuarioLoggeado="";
     localStorage.removeItem("correo");
-    alert("cerrar sesion");
   }
 } 
