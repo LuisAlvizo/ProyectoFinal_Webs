@@ -30,12 +30,12 @@ import { ConsultasComponent } from './components/consultas/consultas.component';
 
 // Aqui estan las rutas que utilizamos
 const routes: Routes = [
-  { path: '', redirectTo: 'oplogin', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'oplogin', component: OpLoginComponent },
   { path: 'opregistro', component: OpRegistroComponent },
   { path: 'login', component: LoginComponent },
   { path: 'logintel', component: LoginTelComponent },
-  { path: 'dashboard', component: RegUsuariosComponent },
+  { path: 'dashboard', component: HomeComponent },
   { path: 'recuperacion', component: RecuperarContraComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'registrotel', component: RegistroTelComponent },

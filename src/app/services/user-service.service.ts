@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class UserServiceService {
   items$: Observable<any[]>;
   users$: Observable<any[]>;
-
+  
   constructor(private firestore: AngularFirestore) {
     this.users$ = this.firestore.collection('usuarios').valueChanges();
     this.items$ = this.firestore.collection('citas').valueChanges();
@@ -35,10 +35,15 @@ export class UserServiceService {
     return this.users$;
   }
 
-  getConsulta(nombre: string): Observable<any> {
+getConsulta(nombre: string): Observable<any> {
     return this.firestore
       .collection<any>('citas', (ref) => ref.where('data.casaReservada.title', '==', nombre))
       .valueChanges();
+  }
+
+  getConsulta2(): Observable<any> {
+    return this.firestore
+      .collection<any>('usuarios').valueChanges();
   }
 
   eliminarCita(nombreUsuario: any): void {
