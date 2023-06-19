@@ -37,19 +37,6 @@ mat-card{
     justify-content: center;
 }
 
-.p22{
-    font-size: 45px;
-    font-weight: bold;
-    color: #6d9b23;
-    margin: 15px;
-    font-family: 'Chewy', cursive;
-
-
-  }
-
-  .tablee{
-    background-color: #d4e7b1;
-  }
 
   h3{
     background-color: rgb(142, 168, 137);
@@ -60,3 +47,43 @@ mat-card{
     padding: 20px;
   }
 
+.default {
+  width: 100%;
+}
+
+/* Estilos para la tabla */
+.default {
+    width: 100%;
+  }
+  
+  .tablee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #d4e7b1;
+  }
+  
+  .tablee td {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .tablee img {
+    max-width: 100%;
+    height: auto;
+    transform: perspective(1000px) rotateX(10deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .tablee img:hover {
+    transform: perspective(1000px) rotateX(0);
+  }
+  
+  .p22 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+  }
+  

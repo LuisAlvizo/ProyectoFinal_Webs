@@ -57,6 +57,8 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { VerReservacionesComponent } from './ver-reservaciones/ver-reservaciones.component';
 import { GraficasComponent } from './components/graficas/graficas.component';
 import { ReverseStr } from './components/pipes/reserved.pipe'
+import { ConsultasComponent } from './components/consultas/consultas.component';
+
 
 @NgModule({
   declarations: [
@@ -92,7 +94,8 @@ import { ReverseStr } from './components/pipes/reserved.pipe'
     UsuariosComponent,
     GraficasComponent,
     GenerarQrComponent,
-    ReverseStr
+    ReverseStr,
+    ConsultasComponent
   ],
   imports: [
     BrowserModule,
