@@ -77,6 +77,6 @@ export class NavbarComponent implements OnInit {
     this.loginUsuario = false;
     this.usuarioLoggeado="";
     localStorage.removeItem("correo");
-    //alert("cerrar sesion");
+    alert("cerrar sesion");
   }
 } 
