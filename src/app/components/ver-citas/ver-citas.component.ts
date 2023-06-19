@@ -68,17 +68,17 @@ export class VerCitasComponent implements OnInit {
     this.router.navigate([`/generarQr/:${name}`]);
   }
 
-  eliminar(fullName: any) {
-    // let body = {
-    //   fullName : 'Juan'
-    // }
 
+  //eliminar citas 
+  // esta funcion nos ayuda a poder eliminar la cita registrada, lo que se hace
+  // es mandar el nombre del registro de la cita a una api que esta es nuestro servidor donde se hara una consulta a 
+  // firebase y continuara con el flujo de cancelacion 
+  eliminar(fullName: any) {
     let body = {
       fullName : fullName
     }
-    
     this.servicioCitas
-      .obtenerQr('https://servernodejs.onrender.com/cancelar', body)
+      .obtenerQr('https://sernodejs.onrender.com/cancelar', body)
       .then((result: any) => {
         console.log(result);
       })
@@ -86,5 +86,4 @@ export class VerCitasComponent implements OnInit {
         console.log(error);
       });
   }
-
 }

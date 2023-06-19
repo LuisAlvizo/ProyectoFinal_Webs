@@ -16,7 +16,8 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Fecha de llegada</th>
                 <th scope="col">Fecha de salida</th>
-                <th scope="col">Hora de llegada</th>             
+                <th scope="col">Hora de llegada</th>   
+                <th scope="col">Alojamiento reservado</th>          
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                 <td>{{reservacion.data.arriveDate}}</td>
                 <td>{{reservacion.data.lastDate}}</td>
                 <td>{{reservacion.data.hora}}</td>
+                <td>{{reservacion.data.casaReservada.title}}</td>
             </tr>
         </tbody>
     </table>

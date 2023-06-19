@@ -21,22 +21,27 @@ export class GenerarQrComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: Params) => {
       //aqui se obtiene el valor que se paso por parametro en la ruta
+      // este paramatro que recibimos es el nombre que enviaremos a nuestra peticion poara que obtenga los dats de dicha cita
       const fullName = params['get']('id').substring(1);
       if (fullName != 'null') {
         console.log(fullName);
-        
+
         this.obtenerQr(fullName);
       }
     });
   }
 
+
+    //  se creo esta funcion en la cual se declaro una variable llamada body la cual igualamos a fullname y se crea un objeto con este valor
+    //  que es el que se manda a nuestra api para continuar con el flujo de la obtencion de datos 
   obtenerQr(fullName: any) {
     let body = {
-      fullName : fullName
-    }
+      fullName: fullName,
+    };
     this.servicioCitas
-      .obtenerQr('https://servernodejs.onrender.com/userQr', body)
+      .obtenerQr('https://sernodejs.onrender.com/userQr', body)
       .then((result: any) => {
+        // Una vez que se obtuvo una respuesta positiva la informacion se manda a nuestra informacion de generar qr la cual nos yuda a continuar con nuestro flujo
         this.generarQr(result.result);
         console.log(result);
       })
@@ -45,14 +50,11 @@ export class GenerarQrComponent implements OnInit {
       });
   }
 
-  //Funcion que ayuda a generar el qr
+  //Funcion que ayuda a generar el qr, esta funcion recibe un objeto que trae la informacion de nuestra consulta, esta la transfomamos en una sola cadena, la cual igualamos
+  // al valor que me mostrara para poder generar el qr
   generarQr(obj: any) {
-    //se genera un numero del 0 a la longiitud del array para obtener un valor random valido
-    // para obtener informacion
-
     //se convierte el valor del objeto ramdon obtenido a un string que se mostrara al scanear el qr
     this.value = JSON.stringify(obj);
-
     // nos ayuda a que una vez que se haya generado la informacion y se haya obetenido un valor se mueestre el
     // qr
     this.visibleQR = true;

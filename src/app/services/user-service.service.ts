@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, QuerySnapshot } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable } from 'rxjs';
 
@@ -15,7 +15,11 @@ export class UserServiceService {
     this.items$ = this.firestore.collection('citas').valueChanges();
   }
 
+
   addCita(user: any) {
+    // Se utiliza la api de firebase a traves de dos fucniones, una seria el idicar en que coleccion 
+    // quiero agregar el registro (collection) y la otra seria la funcion en la que le mando mi objeto y quiero 
+    // que se registre en la bd (add)
     this.firestore.collection('citas').add({ data: user });
   }
 
@@ -29,6 +33,12 @@ export class UserServiceService {
 
   getUsuario() {
     return this.users$;
+  }
+
+  getConsulta(nombre: string): Observable<any> {
+    return this.firestore
+      .collection<any>('citas', (ref) => ref.where('data.casaReservada.title', '==', nombre))
+      .valueChanges();
   }
 
   eliminarCita(nombreUsuario: any): void {

@@ -1,0 +1,30 @@
+<h2>Consultas</h2>
+
+<!-- Botones para realizar consultas -->
+<button (click)="consultar('Cabañas en Maldivas')">Consultar Cabañas en Maldivas</button>
+<button (click)="consultar('Casa frente al mar en Cancún')">Consultar Casa frente al mar en Cancún</button>
+
+<!-- Mostrar las consultas -->
+<div *ngIf="citas$ | async as citas">
+  <h3>Consultas encontradas:</h3>
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de llegada</th>
+            <th scope="col">Fecha de salida</th>
+            <th scope="col">Hora de llegada</th>   
+            <th scope="col">Alojamiento reservado</th>          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservacion of citas$ | async">
+            <td scope="row">{{reservacion.data.fullName}}</td>
+            <td>{{reservacion.data.arriveDate}}</td>
+            <td>{{reservacion.data.lastDate}}</td>
+            <td>{{reservacion.data.hora}}</td>
+            <td>{{reservacion.data.casaReservada.title}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
