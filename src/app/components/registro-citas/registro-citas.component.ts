@@ -131,7 +131,7 @@ export class RegistroCitasComponent implements OnInit{
     //Llamamos a alta y mandamos la url del API, al igual que mandamos
     // los datos del body
     this.servicioCitas
-      .alta('http://localhost:3000/user', reservacionObj)
+      .alta('https://servernodejs.onrender.com/user', reservacionObj)
       .then((data) => {
         console.log(data);
       })
