@@ -75,32 +75,31 @@ export class RegistroComponent {
       .createUserWithEmailAndPassword(email, contra)
       .then(() => {
         // this.toastr.success('Registro exitoso', 'Usuario registrado');
-        this.toastr.success('Registro exitoso', 'Usuario registrado');
-        this.addUser();
-        this.router.navigate(['/verificaciontel']);
+        // this.toastr.success('Registro exitoso', 'Usuario registrado');
+        // this.router.navigate(['/verificaciontel']);
       })
       .catch((error) => {
         console.log(error);
         this.toastr.error(this.firebaseError(error.code), 'Error');
         return;
       });
-    // firebase
-    //   .auth()
-    //   .signInWithPhoneNumber(this.tel, this.reCaptchaVerifier)
-    //   .then((confirmation) => {
-    //     console.log(confirmation);
-    //     localStorage.setItem(
-    //       'verID',
-    //       JSON.stringify(confirmation.verificationId)
-    //     );
-    //     this.toastr.success('Registro exitoso', 'Usuario registrado');
-    //     this.addUser();
-    //     this.router.navigate(['/verificaciontel']);
-    //   })
-    //   .catch((error) => {
-    //     this.toastr.error(error.code, 'Error');
-    //     console.log(error);
-    //   });
+    firebase
+      .auth()
+      .signInWithPhoneNumber(this.tel, this.reCaptchaVerifier)
+      .then((confirmation) => {
+        console.log(confirmation);
+        localStorage.setItem(
+          'verID',
+          JSON.stringify(confirmation.verificationId)
+        );
+        this.toastr.success('Registro exitoso', 'Usuario registrado');
+        this.addUser();
+        this.router.navigate(['/verificaciontel']);
+      })
+      .catch((error) => {
+        this.toastr.error(error.code, 'Error');
+        console.log(error);
+      });
   }
 
   firebaseError(code: string) {
