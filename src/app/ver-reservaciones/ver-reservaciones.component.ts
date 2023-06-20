@@ -13,14 +13,16 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 export class VerReservacionesComponent implements OnInit {
   mostrarCitas: any;
   correo: string = "";
+  valUsuario: string = "";
 
   constructor(private userService: UserServiceService,
     private router: Router) { }
 
   ngOnInit(): void {
     this.correo = localStorage.getItem("correo") || "";
-    if (this.correo == "")
-      this.router.navigate(['/login']);
+    this.valUsuario = localStorage.getItem("usuario") || "";
+    if (this.correo == "" || this.valUsuario == "" || this.valUsuario != "admin")
+      this.router.navigate(['/home']);
     this.getCitas();
   }
 

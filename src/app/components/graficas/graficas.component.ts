@@ -16,14 +16,16 @@ export class GraficasComponent implements OnInit{
   constructor(private userService: UserServiceService,private router: Router) {}
   
   correo: string = "";
+  valUsuario: string = "";
 
 
    chart:  | undefined;
     ngOnInit(): void {
       
-    this.correo = localStorage.getItem("correo") || "";
-    if (this.correo == "")
-      this.router.navigate(['/login']);
+      this.correo = localStorage.getItem("correo") || "";
+      this.valUsuario = localStorage.getItem("usuario") || "";
+      if (this.correo == "" || this.valUsuario == "" || this.valUsuario != "admin")
+        this.router.navigate(['/home']);
       //se obtienen los datos de la base de datos con el método getCita() del servicio
       this.userService.getCita().subscribe(citas => {
         //obtenemos el titulo de las casas reservadas y el número de huespedes

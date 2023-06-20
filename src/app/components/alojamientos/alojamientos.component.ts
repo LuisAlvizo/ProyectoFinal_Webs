@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,8 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './alojamientos.component.html',
   styleUrls: ['./alojamientos.component.css'],
 })
-export class AlojamientosComponent {
+export class AlojamientosComponent implements OnInit {
   constructor(private router: Router) {}
+  correo: string = "";
+  ngOnInit(): void {
+    this.correo = localStorage.getItem("correo") || "";
+    if (this.correo == "")
+      this.router.navigate(['/login']);
+  }
 
   listings = [
     {

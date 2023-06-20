@@ -38,11 +38,13 @@ export class NavbarComponent implements OnInit {
         if (datos.data.correo == this.correo) {
           this.usuarioLoggeado = datos.data.identificador;
           if (this.usuarioLoggeado == 'ADMIN') {
+            localStorage.setItem('usuario','admin');
             this.loginADMIN = true;
             console.log('admin');
           }
           else {
             this.loginUsuario = true;
+            localStorage.setItem('usuario','otro');
           }
         }
       });
@@ -78,5 +80,6 @@ export class NavbarComponent implements OnInit {
     this.usuarioLoggeado="";
     localStorage.removeItem("correo");
     alert("cerrar sesion");
+    localStorage.removeItem('usuario');
   }
 } 
