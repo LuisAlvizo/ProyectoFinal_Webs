@@ -1,66 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
 .card {
-    width: 100%;
-    max-width: 400px;
-    border: 3px solid #2b690e;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  .card img {
-    max-width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  max-width: 400px;
+  border: 3px solid #2b690e;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
-  body{
- 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-  }
-  
-  h2{
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Chewy', cursive;
-    text-align: center;
-    color: #2b690e ;
+.card img {
+  max-width: 100%;
+  height: auto;
+}
 
-  }
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Chewy', cursive;
+  text-align: center;
+  color: #2b690e;
+}
 
-  p{
-    font-family: 'Handlee', cursive;
-    text-align: center;
-    font-size: 26px;
-    color: #1b4707 ;
+p {
+  font-family: 'Handlee', cursive;
+  text-align: center;
+  font-size: 26px;
+  color: #1b4707;
+}
 
+.p22 {
+  font-family: 'Chewy', cursive;
+  font-size: 29px;
+  color: #6d9b23;
+}
 
-  }
+.p2 {
+  font-family: 'Chewy', cursive;
+  font-size: 27px;
+  color: #6d9b23;
+}
 
-  .p22{
-    font-family: 'Chewy', cursive;
-    font-size: 29px;
-    color: #6d9b23 ;
+.displayy {
+  display: flex;
+}
 
-  }
+.cardss {
+  background-color: #90b455;
+}
 
-  .p2{
-    font-family: 'Chewy', cursive;
-    font-size: 27px;
-    color: #6d9b23 ;
+img {
+  width: 100%; /* Modificar según tus necesidades */
+  height: auto;
+}
 
-
-  }
-
-  .displayy{
-    display: flex;
-  }
-
-  .cardss{
-    background-color:  #90b455; 
-
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 100%; /* Otra anchura deseada para pantallas pequeñas */
   }
 
-  img{
-    width: 450px;
-    height: 450px;
+  img {
+    width: 100%; /* Otra anchura deseada para pantallas pequeñas */
   }
+
+  h2 {
+    font-size: 20px; /* Tamaño de fuente deseado para pantallas pequeñas */
+  }
+
+  p {
+    font-size: 22px; /* Tamaño de fuente deseado para pantallas pequeñas */
+  }
+
+  .p22 {
+    font-size: 24px; /* Tamaño de fuente deseado para pantallas pequeñas */
+  }
+
+  .p2 {
+    font-size: 22px; /* Tamaño de fuente deseado para pantallas pequeñas */
+  }
+}

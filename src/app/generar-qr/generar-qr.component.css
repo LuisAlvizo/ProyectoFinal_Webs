@@ -1,0 +1,36 @@
+button {
+    background-color: #547575e0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 33px;
+    cursor: pointer;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+    justify-content: center;
+    border: dotted 5px;
+  
+  }
+  
+  .cardd {
+    width: 30rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgb(115, 152, 187);
+  }
+  
+  .containerr {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h3{
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    color: #fff;
+    font-size: 35px;
+  }
