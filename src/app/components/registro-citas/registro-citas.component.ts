@@ -79,53 +79,42 @@ export class RegistroCitasComponent implements OnInit {
   }
 
   async submitForm() {
-    let validarRegistro: any;
-
-    //llamamos a nuestra funcion que registra las citas pasandole nuestro objeto con la info del registro
-    await this.userService.addCita(this.registerForm.value);
-    this.getCitas();
-
-    // console.log(this.registerForm);
-
-    // Aqui se utiliza el servicio para guardar nuestra cita generada y despues porderla consultar
-    // nuestra variable de validarRegistro nos gusrada el valor que nos regresa nuestra funcion de servicio
-    // si nos devuelve un true, continuamos con el flujo normal de la palicacion, si es false nos muestra un mensaje
-    // de error
-    validarRegistro = await this.servicioCitas.guardarInformacion(
-      this.registerForm.value
-    );
-
-    if (validarRegistro) {
-      this.insertar(this.registerForm.value);
-      //GUARDAR INFORMACION EN EL LOCAL STORAGE
-      //Aqui se guarda la informacion en la variable de alojamientosReservados, donde previamente
-      // se utilizo la funcion parse para obtener los registros ya guardados y de esta manera poder hacer
-      // un push dentro de nuestro array guardado en el localStorage
-      let alojamientosReservados = localStorage.getItem('arrayReservaciones');
-      let alojamientosReservadosStorage = JSON.parse(alojamientosReservados!);
-      alojamientosReservadosStorage.push(this.registerForm.value);
-      localStorage.setItem(
-        'arrayReservaciones',
-        JSON.stringify(alojamientosReservadosStorage)
-      );
-      let registroCliente = JSON.stringify(this.registerForm.value);
-      //------ Aqui se genera un objeto en el localStorage con una llave unica que es generada
-      //mediante el registro que se hace (id y hora) de reserva.
-      localStorage.setItem(
-        `${this.registerForm.value.casaReservada.id}${this.registerForm.value.hora}`,
-        registroCliente
-      );
-      //----
-      this.numeroDeCasaReservada++;
-      console.log(registroCliente);
-      localStorage.removeItem('informacionCasaElegida');
-      // Aqui se le esta pasando el mismo valor del objeto generado en el local storage
-      this.router.navigate([
-        `/verCitas/:${this.registerForm.value.casaReservada.id}${this.registerForm.value.hora}`,
-      ]);
-      this.registerForm.reset();
-    } else {
-      // alert('fecha en que has guardado info ya esta ocupada');
+    try {
+      const resultado = await this.userService.addCita(this.registerForm.value);
+      if (resultado) {
+        this.insertar(this.registerForm.value);
+        //GUARDAR INFORMACION EN EL LOCAL STORAGE
+        //Aqui se guarda la informacion en la variable de alojamientosReservados, donde previamente
+        // se utilizo la funcion parse para obtener los registros ya guardados y de esta manera poder hacer
+        // un push dentro de nuestro array guardado en el localStorage
+        let alojamientosReservados = localStorage.getItem('arrayReservaciones');
+        let alojamientosReservadosStorage = JSON.parse(alojamientosReservados!);
+        alojamientosReservadosStorage.push(this.registerForm.value);
+        localStorage.setItem(
+          'arrayReservaciones',
+          JSON.stringify(alojamientosReservadosStorage)
+        );
+        let registroCliente = JSON.stringify(this.registerForm.value);
+        //------ Aqui se genera un objeto en el localStorage con una llave unica que es generada
+        //mediante el registro que se hace (id y hora) de reserva.
+        localStorage.setItem(
+          `${this.registerForm.value.casaReservada.id}${this.registerForm.value.hora}`,
+          registroCliente
+        );
+        //----
+        this.numeroDeCasaReservada++;
+        console.log(registroCliente);
+        localStorage.removeItem('informacionCasaElegida');
+        // Aqui se le esta pasando el mismo valor del objeto generado en el local storage
+        this.router.navigate([
+          `/verCitas/:${this.registerForm.value.casaReservada.id}${this.registerForm.value.hora}`,
+        ]);
+        this.registerForm.reset();
+        this.getCitas();
+      } else {
+        this.showModal2();
+      }
+    } catch (error) {
       this.showModal2();
     }
   }
@@ -133,9 +122,8 @@ export class RegistroCitasComponent implements OnInit {
   insertar(reservacionObj: any): void {
     //Llamamos a alta y mandamos la url del API, al igual que mandamos
     // los datos del body
-
     //correo electronico
-    // este objeto contienen los datos necesarios de la reservacion los cuales nosotros manejamos en la bd y utilizamos para mandar la 
+    // este objeto contienen los datos necesarios de la reservacion los cuales nosotros manejamos en la bd y utilizamos para mandar la
     // informacion necesaria por el correo que se les proporciona en este mismo Objecto
     this.servicioCitas
       .alta('https://sernodejs.onrender.com/user', reservacionObj)
